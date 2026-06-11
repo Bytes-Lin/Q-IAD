@@ -1,8 +1,8 @@
 from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 
-gt_path = "./code/config/COCO_format_mvtec_test_v4.json"
-pred_path = "./evaluate_mvtec/predict/predict_quaternion_mv_v15.json"
+gt_path = "./code/config/COCO_format_v3_test.json"
+pred_path = "./code/predict/predict_3cad_lora.json"
 
 coco_gt = COCO(gt_path)
 coco_dt = coco_gt.loadRes(pred_path)
