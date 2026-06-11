@@ -264,13 +264,13 @@ def eval_and_save_coco(
 
 if __name__ == '__main__':
     model_id = 'Qwen/Qwen2.5-VL-3B-Instruct'
-    model_path = './model/quaternion_new/inside_5_4_1_1000'
-    lora_model_path = './model/quaternion_new/checkpoints_mv/SFT_model_quaternion_v15/model'
+    model_path = ''
+    lora_model_path = ''
 
     data_root = './code'
-    test_datasets = ['config/mvtec_ad_test_v4']  # data_root + path
-    image_root = './dataset/mvtec_ad'
-    gt_coco_file = './code/config/COCO_format_mvtec_test_v4.json'
+    test_datasets = ['config/test_v3_stage2']  # data_root + path
+    image_root = './dataset/3CAD_v3'
+    gt_coco_file = './code/config/COCO_format_v3_test.json'
     output_coco_pred = 'predict/predict.json'
     is_lora = True
     device_map = 'cuda:0'
