@@ -4,7 +4,12 @@ os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 import sys
-sys.path.append('/data/xxl/QwenIADv1/code/models')
+from pathlib import Path
+
+CURRENT_DIR = Path(__file__).resolve().parent
+
+sys.path.append(str(CURRENT_DIR))
+# print(sys.path)
 
 from math import sqrt
 from typing import Optional, Unpack, Union
@@ -365,11 +370,3 @@ class NewQwen(Qwen2_5_VLForConditionalGeneration):
     def __init__(self, config):
         super().__init__(config)
         self.model = NewVLModel(config)
-
-
-if __name__ == '__main__':
-    dtype = torch.bfloat16
-    model_path = './model/quaternion_new/inside_5_4_1_1000'
-    model = NewQwen.from_pretrained(model_path, device_map='auto', torch_dtype=dtype).eval()
-    print(model)
-    print(model.config)

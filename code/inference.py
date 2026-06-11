@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 from peft import PeftConfig, PeftModel
 from tqdm import tqdm
 from qwen_vl_utils import process_vision_info
-from transformers import Qwen2_5_VLProcessor, AutoConfig
+from transformers import Qwen2_5_VLProcessor
 
 from models.qwen25_vl import NewQwen
 
@@ -265,9 +265,9 @@ def eval_and_save_coco(
 if __name__ == '__main__':
     model_id = 'Qwen/Qwen2.5-VL-3B-Instruct'
     model_path = './model/quaternion_new/inside_5_4_1_1000'
-    lora_model_path = './model/quaternion_new/checkpoints_mv/SFT_model_quaternion_v15/model'  # lora模型路径
+    lora_model_path = './model/quaternion_new/checkpoints_mv/SFT_model_quaternion_v15/model'
 
-    data_root = './dataset'
+    data_root = './code'
     test_datasets = ['config/mvtec_ad_test_v4']  # data_root + path
     image_root = './dataset/mvtec_ad'
     gt_coco_file = './code/config/COCO_format_mvtec_test_v4.json'
