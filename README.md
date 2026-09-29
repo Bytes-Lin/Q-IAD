@@ -1,6 +1,7 @@
 # Q-IAD
 
-This repository provides the evaluation code for Quaternion-Guided Multimodal Interaction for MLLM-Based Industrial Anomaly Detection.
+This repository provides the evaluation code for Do Multimodal Large Language Models Really Localize Industrial
+Defects? A Fine-Grained Grounding Study in Real-World Scenarios.
 
 ## Environment Setup
 
